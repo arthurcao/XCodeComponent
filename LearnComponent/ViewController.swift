@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnCheckbox: CheckBox!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
+        //btnCheckbox.hintColor = UIColor.black
+        
+        btnCheckbox.didChangeChecked = {(ischecked) in
+            print("ischecked: \(ischecked)")
+        }
+       btnCheckbox.hintColor = UIColor.red
     }
 
     override func didReceiveMemoryWarning() {
