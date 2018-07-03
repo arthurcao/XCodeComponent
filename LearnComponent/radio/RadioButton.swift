@@ -9,43 +9,76 @@
 import UIKit
 
 class RadioButton: UIButton {
-    var alternateButton:Array<RadioButton>?
+    
+    // Images
+    var checkedImage = UIImage(named: "ic_radio_checked_component")! as UIImage
+    var uncheckedImage = UIImage(named: "ic_radio_unchecked_component")! as UIImage
+    
+    
+    
+    
+    var hintColor : UIColor = UIColor.blue{
+        didSet{
+            checkedImage = checkedImage.imageWithColor(hintColor)
+            uncheckedImage = uncheckedImage.imageWithColor(hintColor)
+            updateImage()
+            setNeedsDisplay()
+        }
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        hintColor = UIColor.blue
+    }
+    
+    // Bool property
+    var isChecked: Bool = false {
+        didSet{
+            updateImage()
+        }
+    }
+    
+    func updateImage(){
+        if isChecked == true {
+            self.setImage(checkedImage, for: UIControlState.normal)
+        } else {
+            self.setImage(uncheckedImage, for: UIControlState.normal)
+        }
+    }
+    
     
     override func awakeFromNib() {
-        self.layer.cornerRadius = 5
-        self.layer.borderWidth = 2.0
-        self.layer.masksToBounds = true
+        self.addTarget(self, action:#selector(buttonClicked(sender:)), for: UIControlEvents.touchUpInside)
+        self.isChecked = false
+        
+        
     }
     
-    func unselectAlternateButtons(){
-        if alternateButton != nil {
-            self.isSelected = true
-            
-            for aButton:RadioButton in alternateButton! {
-                aButton.isSelected = false
-            }
-        }else{
-            toggleButton()
+    @objc func buttonClicked(sender: UIButton) {
+        if sender == self {
+            isChecked = !isChecked
         }
+        
+        
+        didChangeChecked?(isChecked)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        unselectAlternateButtons()
-        super.touchesBegan(touches, with: event)
-    }
     
-    func toggleButton(){
-        self.isSelected = !isSelected
-    }
-    
-    override var isSelected: Bool {
+    var didChangeChecked: ((_ isChecked: Bool)->(Void))? {
         didSet {
-            if isSelected {
-                self.layer.borderColor = UIColor.cyan.cgColor
-            } else {
-                self.layer.borderColor = UIColor.gray.cgColor
-            }
+            //  setupFinished!(startValue,endValue)
         }
     }
+    
+    func howotUser(){
+        //TODO: Use
+        //btnCheckbox.didChangeChecked = {(ischecked) in
+        //     print("ischecked: \(ischecked)")
+        //}
+        //btnCheckbox.hintColor = UIColor.red
+        //print("print isChecked = \(isChecked)")
+    }
+    
 }
 

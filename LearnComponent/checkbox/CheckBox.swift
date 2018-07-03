@@ -61,12 +61,7 @@ class CheckBox: UIButton {
             isChecked = !isChecked
         }
         
-        //        TODO: Use
-//        btnCheckbox.didChangeChecked = {(ischecked) in
-//            print("ischecked: \(ischecked)")
-//        }
-        //btnCheckbox.hintColor = UIColor.red
-        //print("print isChecked = \(isChecked)")
+        
         didChangeChecked?(isChecked)
     }
     
@@ -75,6 +70,15 @@ class CheckBox: UIButton {
         didSet {
             //  setupFinished!(startValue,endValue)
         }
+    }
+    
+    func howotUser(){
+        //TODO: Use
+        //btnCheckbox.didChangeChecked = {(ischecked) in
+        //     print("ischecked: \(ischecked)")
+        //}
+        //btnCheckbox.hintColor = UIColor.red
+        //print("print isChecked = \(isChecked)")
     }
     
 }

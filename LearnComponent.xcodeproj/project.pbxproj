@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A4A88F020EA321B001764CC /* AlertRadioGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A88EF20EA321B001764CC /* AlertRadioGroup.swift */; };
 		9A6BD26D20E6336000163F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BD26C20E6336000163F8B /* AppDelegate.swift */; };
 		9A6BD26F20E6336100163F8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BD26E20E6336100163F8B /* ViewController.swift */; };
 		9A6BD27220E6336100163F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6BD27020E6336100163F8B /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 		9A6BD29E20E6435500163F8B /* ic_uncheck_component.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6BD29D20E6435500163F8B /* ic_uncheck_component.png */; };
 		9A6BD2A020E643B900163F8B /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BD29F20E643B900163F8B /* CheckBox.swift */; };
 		9A6BD2A520E666AC00163F8B /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BD2A420E666AC00163F8B /* RadioButton.swift */; };
+		9A9ED00420E76E8F00B1B0DE /* ic_radio_checked_component.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9ED00220E76E8E00B1B0DE /* ic_radio_checked_component.png */; };
+		9A9ED00520E76E8F00B1B0DE /* ic_radio_unchecked_component.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9ED00320E76E8F00B1B0DE /* ic_radio_unchecked_component.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A4A88EF20EA321B001764CC /* AlertRadioGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRadioGroup.swift; sourceTree = "<group>"; };
 		9A6BD26920E6336000163F8B /* LearnComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6BD26C20E6336000163F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A6BD26E20E6336100163F8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,8 @@
 		9A6BD29D20E6435500163F8B /* ic_uncheck_component.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_uncheck_component.png; sourceTree = "<group>"; };
 		9A6BD29F20E643B900163F8B /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		9A6BD2A420E666AC00163F8B /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		9A9ED00220E76E8E00B1B0DE /* ic_radio_checked_component.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_checked_component.png; sourceTree = "<group>"; };
+		9A9ED00320E76E8F00B1B0DE /* ic_radio_unchecked_component.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_unchecked_component.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +154,10 @@
 		9A6BD2A320E6662E00163F8B /* radio */ = {
 			isa = PBXGroup;
 			children = (
+				9A9ED00220E76E8E00B1B0DE /* ic_radio_checked_component.png */,
+				9A9ED00320E76E8F00B1B0DE /* ic_radio_unchecked_component.png */,
 				9A6BD2A420E666AC00163F8B /* RadioButton.swift */,
+				9A4A88EF20EA321B001764CC /* AlertRadioGroup.swift */,
 			);
 			path = radio;
 			sourceTree = "<group>";
@@ -257,11 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9ED00520E76E8F00B1B0DE /* ic_radio_unchecked_component.png in Resources */,
 				9A6BD27720E6336D00163F8B /* LaunchScreen.storyboard in Resources */,
 				9A6BD29E20E6435500163F8B /* ic_uncheck_component.png in Resources */,
 				9A6BD27420E6336D00163F8B /* Assets.xcassets in Resources */,
 				9A6BD27220E6336100163F8B /* Main.storyboard in Resources */,
 				9A6BD29C20E6432F00163F8B /* ic_check_component.png in Resources */,
+				9A9ED00420E76E8F00B1B0DE /* ic_radio_checked_component.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +299,7 @@
 			files = (
 				9A6BD26F20E6336100163F8B /* ViewController.swift in Sources */,
 				9A6BD26D20E6336000163F8B /* AppDelegate.swift in Sources */,
+				9A4A88F020EA321B001764CC /* AlertRadioGroup.swift in Sources */,
 				9A6BD2A020E643B900163F8B /* CheckBox.swift in Sources */,
 				9A6BD2A520E666AC00163F8B /* RadioButton.swift in Sources */,
 			);

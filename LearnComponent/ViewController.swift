@@ -29,9 +29,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @objc func dailyScheduleChange(sender: UIButton!) {
+        print("Main Button tapped", sender.tag)
+      //  alertDailySchedule.dismiss(animated: true, completion: nil)
+    }
     
     
+    @IBAction func pressClickMe(_ sender: Any) {
+        
+        let mAlertRadio = AlertRadioGroup(title: "title", message: nil, preferredStyle: .alert)
+        
+        mAlertRadio.additem(data: ["5-1-1 Scheduling", "Daily Scheduling", "Daily Scheduling", "Daily Scheduling", "Daily Scheduling"])
+        mAlertRadio.setSelected(select: 1)        
+        mAlertRadio.didSelectedItem =  { (item) in
+            print("Select radio button \(item)")
+        }
+   
+         mAlertRadio.build()
+        self.present(mAlertRadio, animated: true)
+        
+    }
     
+    @objc func buttonAction1(sender: UIButton!) {
+        print("Main aaa Button tapped", sender.tag)
+        //alert1.dismiss(animated: true, completion: nil)
+    }
     
     
 
